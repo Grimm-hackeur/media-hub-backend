@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0a0a;
+  --color-panel: #141414;
+  --color-hover: #1a1a1a;
+  --color-line: #262626;
+  --color-line-strong: #404040;
+  --color-muted: #8a8a8a;
+  --color-soft: #a1a1a1;
+  --color-accent: #8b5cf6;
+  --color-accent-soft: #c4b5fd;
+  --color-danger: #f87171;
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+}
+
+:root { color-scheme: dark; }
+html, body, #root { height: 100%; }
+body { margin: 0; background: #0a0a0a; color: #fff; font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+@keyframes mh-spin { to { transform: rotate(360deg); } }
+.mh-spin { animation: mh-spin .8s linear infinite; }
+@keyframes mh-pop { from { transform: scale(0); } to { transform: scale(1); } }
+.mh-pop { animation: mh-pop .25s ease; }
+@keyframes mh-fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.mh-fade { animation: mh-fade .2s ease; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+@keyframes mh-pulse { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+.mh-pulse { animation: mh-pulse 1.6s ease-in-out infinite; }
